@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:re="http://purl.org/atompub/rank/1.0">
+    <title type="text">Recent Questions - Stack Overflow</title>
+    <link rel="self" href="https://stackoverflow.com/feeds" type="application/atom+xml" />
+    <link rel="alternate" href="https://stackoverflow.com/questions" type="text/html" />
+    <subtitle>most recent 30 from stackoverflow.com</subtitle>
+    <updated>2023-03-02T13:44:48Z</updated>
+    <id>https://stackoverflow.com/feeds</id>
+    <creativeCommons:license>https://creativecommons.org/licenses/by-sa/4.0/rdf</creativeCommons:license>
+    <entry>
+        <id>https://stackoverflow.com/q/75616249</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">NoReverseMatch at / Reverse for &#x27;athlete_profile&#x27; with keyword arguments &#x27;{&#x27;pk&#x27;: &#x27;&#x27;}&#x27; not found</title>
+        <category scheme="https://stackoverflow.com/tags" term="django" />
+        <category scheme="https://stackoverflow.com/tags" term="django-models" />
+        <category scheme="https://stackoverflow.com/tags" term="django-views" />
+        <category scheme="https://stackoverflow.com/tags" term="django-templates" />
+        <author>
+            <name>Shruti Barve</name>
+            <uri>https://stackoverflow.com/users/21300134</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616249/noreversematch-at-reverse-for-athlete-profile-with-keyword-arguments-pk" />
+        <published>2023-03-02T13:42:24Z</published>
+        <updated>2023-03-02T13:42:24Z</updated>
+        <summary type="html">
+            &lt;p&gt;i&#x27;m trying to make a page where i can display an athlete&#x27;s profile to them by using their primary key as a refernce but i get an error as follows:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Environment:&#xA;&#xA;&#xA;Request Method: GET&#xA;Request URL: http://127.0.0.1:8000/&#xA;&#xA;Django Version: 4.1.7&#xA;Python Version: 3.11.0&#xA;Installed Applications:&#xA;[&#x27;django.contrib.admin&#x27;,&#xA; &#x27;django.contrib.auth&#x27;,&#xA; &#x27;django.contrib.contenttypes&#x27;,&#xA; &#x27;django.contrib.sessions&#x27;,&#xA; &#x27;django.contrib.messages&#x27;,&#xA; &#x27;django.contrib.staticfiles&#x27;,&#xA; &#x27;users&#x27;,&#xA; &#x27;events&#x27;,&#xA; &#x27;userty&#x27;]&#xA;Installed Middleware:&#xA;[&#x27;django.middleware.security.SecurityMiddleware&#x27;,&#xA; &#x27;django.contrib.sessions.middleware.SessionMiddleware&#x27;,&#xA; &#x27;django.middleware.common.CommonMiddleware&#x27;,&#xA; &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,&#xA; &#x27;django.contrib.auth.middleware.AuthenticationMiddleware&#x27;,&#xA; &#x27;django.contrib.messages.middleware.MessageMiddleware&#x27;,&#xA; &#x27;django.middleware.clickjacking.XFrameOptionsMiddleware&#x27;]&#xA;&#xA;&#xA;Template error:&#xA;In template C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\templates\base.html, error at line 81&#xA;   Reverse for &#x27;athlete_profile&#x27; with keyword arguments &#x27;{&#x27;pk&#x27;: &#x27;&#x27;}&#x27; not found. 1 pattern(s) tried: [&#x27;users/profile/athlete/(?P&amp;lt;pk&amp;gt;[0-9]&#x2B;)/\\Z&#x27;]&#xA;   71 : &amp;lt;/head&amp;gt;&#xA;   72 : &amp;lt;body&amp;gt;&#xA;   73 :   &amp;lt;nav&amp;gt;&#xA;   74 :     &amp;lt;div&amp;gt;&#xA;   75 :       &amp;lt;a href=&amp;quot;{% url &#x27;home&#x27; %}&amp;quot;&amp;gt;Combat-Con&amp;lt;/a&amp;gt;&#xA;   76 :     &amp;lt;/div&amp;gt;&#xA;   77 :     &amp;lt;div&amp;gt;&#xA;   78 :       &amp;lt;a href=&amp;quot;{% url &#x27;events:event_list&#x27; %}&amp;quot;&amp;gt;Events&amp;lt;/a&amp;gt;&#xA;   79 :       {% if user.is_authenticated %}&#xA;   80 :         {% if user.is_athlete %}&#xA;   81 :             &amp;lt;a href=&amp;quot; {% url &#x27;userty:athlete_profile&#x27; pk=athlete.pk %} &amp;quot;&amp;gt;Athlete Profile&amp;lt;/a&amp;gt;&#xA;   82 :         {% elif user.is_host %}&#xA;   83 :           &amp;lt;a href=&amp;quot;{% url &#x27;userty:host_profile&#x27; pk=user.host.pk %}&amp;quot;&amp;gt;Host Profile&amp;lt;/a&amp;gt;&#xA;   84 :         {% endif %}&#xA;   85 :       &amp;lt;a href=&amp;quot;{% url &#x27;userty:user_logout&#x27; %}&amp;quot;&amp;gt;Logout&amp;lt;/a&amp;gt;&#xA;   86 :       {% else %}&#xA;   87 :         &amp;lt;a href=&amp;quot;{% url &#x27;userty:register&#x27; %}&amp;quot;&amp;gt;Register&amp;lt;/a&amp;gt;&#xA;   88 :         &amp;lt;a href=&amp;quot;{% url &#x27;userty:login&#x27; %}&amp;quot;&amp;gt;Login&amp;lt;/a&amp;gt;&#xA;   89 :       {% endif %}&#xA;   90 :     &amp;lt;/div&amp;gt;&#xA;   91 :   &amp;lt;/nav&amp;gt;&#xA;&#xA;&#xA;Traceback (most recent call last):&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\core\handlers\exception.py&amp;quot;, line 56, in inner&#xA;    response = get_response(request)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\core\handlers\base.py&amp;quot;, line 197, in _get_response&#xA;    response = wrapped_callback(request, *callback_args, **callback_kwargs)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\userty\views.py&amp;quot;, line 15, in home&#xA;    return render(request, &#x27;home.html&#x27;)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\shortcuts.py&amp;quot;, line 24, in render&#xA;    content = loader.render_to_string(template_name, context, request, using=using)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\loader.py&amp;quot;, line 62, in render_to_string&#xA;    return template.render(context, request)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\backends\django.py&amp;quot;, line 61, in render&#xA;    return self.template.render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 175, in render&#xA;    return self._render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 167, in _render&#xA;    return self.nodelist.render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 1005, in render&#xA;    return SafeString(&amp;quot;&amp;quot;.join([node.render_annotated(context) for node in self]))&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 1005, in &amp;lt;listcomp&amp;gt;&#xA;    return SafeString(&amp;quot;&amp;quot;.join([node.render_annotated(context) for node in self]))&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 966, in render_annotated&#xA;    return self.render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\loader_tags.py&amp;quot;, line 157, in render&#xA;    return compiled_parent._render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 167, in _render&#xA;    return self.nodelist.render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 1005, in render&#xA;    return SafeString(&amp;quot;&amp;quot;.join([node.render_annotated(context) for node in self]))&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 1005, in &amp;lt;listcomp&amp;gt;&#xA;    return SafeString(&amp;quot;&amp;quot;.join([node.render_annotated(context) for node in self]))&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 966, in render_annotated&#xA;    return self.render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\defaulttags.py&amp;quot;, line 321, in render&#xA;    return nodelist.render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 1005, in render&#xA;    return SafeString(&amp;quot;&amp;quot;.join([node.render_annotated(context) for node in self]))&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 1005, in &amp;lt;listcomp&amp;gt;&#xA;    return SafeString(&amp;quot;&amp;quot;.join([node.render_annotated(context) for node in self]))&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 966, in render_annotated&#xA;    return self.render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\defaulttags.py&amp;quot;, line 321, in render&#xA;    return nodelist.render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 1005, in render&#xA;    return SafeString(&amp;quot;&amp;quot;.join([node.render_annotated(context) for node in self]))&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 1005, in &amp;lt;listcomp&amp;gt;&#xA;    return SafeString(&amp;quot;&amp;quot;.join([node.render_annotated(context) for node in self]))&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\base.py&amp;quot;, line 966, in render_annotated&#xA;    return self.render(context)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\template\defaulttags.py&amp;quot;, line 471, in render&#xA;    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\urls\base.py&amp;quot;, line 88, in reverse&#xA;    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)&#xA;  File &amp;quot;C:\SHRUTI\SEM_6\PROJECT\COMBAT_CON_F\myvenv\Lib\site-packages\django\urls\resolvers.py&amp;quot;, line 828, in _reverse_with_prefix&#xA;    raise NoReverseMatch(msg)&#xA;&#xA;Exception Type: NoReverseMatch at /&#xA;Exception Value: Reverse for &#x27;athlete_profile&#x27; with keyword arguments &#x27;{&#x27;pk&#x27;: &#x27;&#x27;}&#x27; not found. 1 pattern(s) tried: [&#x27;users/profile/athlete/(?P&amp;lt;pk&amp;gt;[0-9]&#x2B;)/\\Z&#x27;]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;my athlete_profile view is as follows:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;@login_required&#xA;def athlete_profile(request,pk):&#xA;    if request.user.is_athlete:&#xA;        #athlete = request.user.athlete(pk=pk)&#xA;        #athlete = Athlete.objects.get(user=request.user, pk=pk)&#xA;        athlete = get_object_or_404(Athlete,pk=pk)&#xA;        return render(request, &#x27;users/athlete_profile&#x27;, {&#x27;athlete&#x27;: athlete})&#xA;    else:&#xA;        return redirect(&#x27;home&#x27;)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;urls.py as follows:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;path(&#x27;profile/athlete/&amp;lt;int:pk&amp;gt;/&#x27;, views.athlete_profile, name=&#x27;athlete_profile&#x27;),&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;i&#x27;ve tried using different functions to get athlete info (see the commented code in view function).&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616248</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Intersecting polyline with polygon in QGIS / postGIS (split line at polygon boundary)</title>
+        <category scheme="https://stackoverflow.com/tags" term="union" />
+        <category scheme="https://stackoverflow.com/tags" term="postgis" />
+        <category scheme="https://stackoverflow.com/tags" term="intersection" />
+        <category scheme="https://stackoverflow.com/tags" term="qgis" />
+        <author>
+            <name>threeisles</name>
+            <uri>https://stackoverflow.com/users/2382563</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616248/intersecting-polyline-with-polygon-in-qgis-postgis-split-line-at-polygon-boun" />
+        <published>2023-03-02T13:42:14Z</published>
+        <updated>2023-03-02T13:42:14Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have two datasets (currently in geopackage files) but also have them in a PostGIS database.&lt;/p&gt;&#xA;&lt;p&gt;1 polyline with about 1 million records&#xA;1 polygon with about 50,000 polygons&lt;/p&gt;&#xA;&lt;p&gt;I want to intersect the lines with the polygons, so as to attribute the lines with the data for the polygons.&lt;/p&gt;&#xA;&lt;p&gt;When a polyline passes through the polygon, I need it split into two feature - one for each side of the polygon boundary.&lt;/p&gt;&#xA;&lt;p&gt;How is best to do this in QGIS / PostGIS? In ArcGIS I would use the intersect or spatial join functions and they run within a few minutes, but in QGIS  the equivalent tools take hours, if not days to complete.  Any suggestions on what I should do to speed these up?&lt;/p&gt;&#xA;&lt;p&gt;I have tried building spatial indexs in QGIS but unsure if it worked (took only a second or so to run)&lt;/p&gt;&#xA;&lt;p&gt;I have access to QGIS, R, and PostGIS (though I am a real novice at PostGIS)&lt;/p&gt;&#xA;&lt;p&gt;Thanks very much.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616242</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">index.php as Vite Entry Point</title>
+        <category scheme="https://stackoverflow.com/tags" term="javascript" />
+        <category scheme="https://stackoverflow.com/tags" term="php" />
+        <category scheme="https://stackoverflow.com/tags" term="vite" />
+        <author>
+            <name>Homer Pitt</name>
+            <uri>https://stackoverflow.com/users/15343004</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616242/index-php-as-vite-entry-point" />
+        <published>2023-03-02T13:41:46Z</published>
+        <updated>2023-03-02T13:41:46Z</updated>
+        <summary type="html">
+            &lt;p&gt;I started a static project with a &lt;a href=&quot;https://www.programonaut.com/how-to-create-a-website-with-html-and-tailwind-css-step-by-step/&quot; rel=&quot;nofollow noreferrer&quot;&gt;Plain-HTML-Tailwind-Template&lt;/a&gt;. It uses Vite for bundling with default config.&lt;/p&gt;&#xA;&lt;p&gt;What i forgot is that i need a little bit of php so i have to rename my file from &lt;code&gt;index.html&lt;/code&gt; to &lt;code&gt;index.php&lt;/code&gt;. Of course vite no longer worked and i tried to change the entry point, but now i&#x27;m getting this error:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&#x2713; 0 modules transformed.&#xA;[rollup-plugin-dynamic-import-variables] Unexpected token (1:0)&#xA;file: C:/dev/newsletter.zipse.de/index.php:1:0&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Unfortunately i have very little experience with vite. how i can fix this?&lt;/p&gt;&#xA;&lt;p&gt;Here are my files&lt;/p&gt;&#xA;&lt;p&gt;vite.config.js&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;import { resolve } from &amp;quot;path&amp;quot;;&#xA;import { defineConfig } from &amp;quot;vite&amp;quot;;&#xA;&#xA;export default defineConfig({&#xA;  build: {&#xA;    rollupOptions: {&#xA;      input: {&#xA;        main: resolve(__dirname, &amp;quot;index.php&amp;quot;),&#xA;      },&#xA;    },&#xA;  },&#xA;});&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;tailwind.config.js&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;module.exports = {&#xA;  content: [&amp;quot;./index.php&amp;quot;],&#xA;  theme: {&#xA;    extend: {},&#xA;  },&#xA;  plugins: [],&#xA;};&#xA;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;postcss.config.js&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;module.exports = {&#xA;  plugins: {&#xA;    tailwindcss: {},&#xA;    autoprefixer: {},&#xA;  },&#xA;}&#xA;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;package.json&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;...&#xA;  &amp;quot;scripts&amp;quot;: {&#xA;    &amp;quot;dev&amp;quot;: &amp;quot;vite&amp;quot;,&#xA;    &amp;quot;build&amp;quot;: &amp;quot;vite build&amp;quot;,&#xA;    &amp;quot;preview&amp;quot;: &amp;quot;vite preview&amp;quot;&#xA;  },&#xA;  &amp;quot;devDependencies&amp;quot;: {&#xA;    &amp;quot;autoprefixer&amp;quot;: &amp;quot;^10.4.4&amp;quot;,&#xA;    &amp;quot;postcss&amp;quot;: &amp;quot;^8.4.12&amp;quot;,&#xA;    &amp;quot;tailwindcss&amp;quot;: &amp;quot;^3.0.23&amp;quot;,&#xA;    &amp;quot;vite&amp;quot;: &amp;quot;^2.9.0&amp;quot;&#xA;  }&#xA;...&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616238</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">reauth related error (invalid_rapt) when accessing firestore from firebase function after enabling Identity Platform</title>
+        <category scheme="https://stackoverflow.com/tags" term="google-cloud-firestore" />
+        <category scheme="https://stackoverflow.com/tags" term="firebase-authentication" />
+        <category scheme="https://stackoverflow.com/tags" term="google-cloud-functions" />
+        <category scheme="https://stackoverflow.com/tags" term="firebase-admin" />
+        <category scheme="https://stackoverflow.com/tags" term="google-iam" />
+        <author>
+            <name>sol</name>
+            <uri>https://stackoverflow.com/users/1369160</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616238/reauth-related-error-invalid-rapt-when-accessing-firestore-from-firebase-funct" />
+        <published>2023-03-02T13:41:33Z</published>
+        <updated>2023-03-02T13:41:33Z</updated>
+        <summary type="html">
+            &lt;p&gt;I recently enabled Identity Platform from the Firebase interface for firebase authentication (primary for user logs).  Everything worked fine for a few hours.  Went to bed. Woke up. Starting working again, and now I receive this error:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;{&#xA;  &amp;quot;error&amp;quot;: &amp;quot;invalid_grant&amp;quot;,&#xA;  &amp;quot;error_description&amp;quot;: &amp;quot;reauth related error (invalid_rapt)&amp;quot;,&#xA;  &amp;quot;error_uri&amp;quot;: &amp;quot;https://support.google.com/a/answer/9368756&amp;quot;,&#xA;  &amp;quot;error_subtype&amp;quot;: &amp;quot;invalid_rapt&amp;quot;&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I visited the error_uri, and the error suggests that I enable a session length for the google apps domain.  I don&#x27;t have direct access to do this, but have a request in to the administrator of the google app domain to do so.&lt;/p&gt;&#xA;&lt;p&gt;That said, this is concerning, as the bit of code it&#x27;s failing on is leveraging the standard firebase admin service account in a firebase function (google cloud function),  not a traditional user.   I would think this error wouldn&#x27;t be triggered by a service account. I should note for clarity, I am using a local functions emulator, but the cloud (not-local) firestore, which all was working for a few hours before going to bed. The code that triggers the error looks like this:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;const admin = require(&amp;quot;firebase-admin&amp;quot;);&#xA;admin.initializeApp();&#xA;const myData = await admin&#xA;      .firestore()&#xA;      .doc(`/path/to/needed/data`)&#xA;      .get()&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Perhaps this is a simple domain-wide requirement when identity platform was enabled and when that setting is enabled, everything will work as expected.   But I suspect I will need to configure a policy or something to allow this service account to satisfy that requirement.&lt;/p&gt;&#xA;&lt;p&gt;I did find &lt;a href=&quot;https://stackoverflow.com/questions/69871806/google-identity-platform-with-firebase-sdk-what-are-the-appropriate-iam-permis&quot;&gt;one post&lt;/a&gt; that looked similar and tried their solution, but it did not work for me.&lt;/p&gt;&#xA;&lt;p&gt;Not sure where to go from here, and would love any advice on how to resolve.    Not many results come up for this error related to firebase, only big query.&lt;/p&gt;&#xA;&lt;p&gt;Thank you in advance for your help.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616237</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">How to handle Outlined text fied Error in Jetpack compose?</title>
+        <category scheme="https://stackoverflow.com/tags" term="kotlin" />
+        <category scheme="https://stackoverflow.com/tags" term="android-jetpack-compose" />
+        <author>
+            <name>abdelrahim gamal</name>
+            <uri>https://stackoverflow.com/users/18588930</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616237/how-to-handle-outlined-text-fied-error-in-jetpack-compose" />
+        <published>2023-03-02T13:41:33Z</published>
+        <updated>2023-03-02T13:41:33Z</updated>
+        <summary type="html">
+            &lt;p&gt;&lt;a href=&quot;https://i.stack.imgur.com/Vt0Zx.jpg&quot; rel=&quot;nofollow noreferrer&quot;&gt;like this&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I tried isError and it showed boarder only I am expecting it to show bottom red text too&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616234</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Querydsl does not generate enum type fields in QFiles</title>
+        <category scheme="https://stackoverflow.com/tags" term="spring" />
+        <category scheme="https://stackoverflow.com/tags" term="spring-boot" />
+        <category scheme="https://stackoverflow.com/tags" term="kotlin" />
+        <category scheme="https://stackoverflow.com/tags" term="jpa" />
+        <category scheme="https://stackoverflow.com/tags" term="querydsl" />
+        <author>
+            <name>prospective developer</name>
+            <uri>https://stackoverflow.com/users/11467513</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616234/querydsl-does-not-generate-enum-type-fields-in-qfiles" />
+        <published>2023-03-02T13:41:23Z</published>
+        <updated>2023-03-02T13:41:23Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am working on a Kotlin Spring Boot project with the following versions:&lt;/p&gt;&#xA;&lt;p&gt;Kotlin version: 1.7.22&#xA;Spring Boot version: 2.7.7&#xA;Querydsl version: 5.0.0&#xA;The project is built using Gradle version 7.6.&lt;/p&gt;&#xA;&lt;p&gt;I added the necessary dependencies to use Querydsl and generated QFiles are created successfully, and most of the fields are generated correctly. However, fields with an enum type are not generated. I have tried rebuilding the project multiple times and also tried resetting the cache, but the issue persists.&lt;/p&gt;&#xA;&lt;p&gt;I have also tried using both IntelliJ build and run settings and Gradle, and have tried with both nullable and non-nullable enum fields, but the enum fields are still not generated. Can you help me figure out what could be causing this issue?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616233</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Keep data validation and drop down same after updating Google sheets using gspread</title>
+        <category scheme="https://stackoverflow.com/tags" term="python" />
+        <category scheme="https://stackoverflow.com/tags" term="google-sheets" />
+        <category scheme="https://stackoverflow.com/tags" term="google-api" />
+        <category scheme="https://stackoverflow.com/tags" term="gspread" />
+        <author>
+            <name>trathi01</name>
+            <uri>https://stackoverflow.com/users/15864441</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616233/keep-data-validation-and-drop-down-same-after-updating-google-sheets-using-gspre" />
+        <published>2023-03-02T13:41:21Z</published>
+        <updated>2023-03-02T13:41:21Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am working on an existing script made by someone else which updates few google sheets. I am relatively new to Python. Everything is fine, but when lets say it updates an existing row the dropdown option or conditional formatting is also removed &amp;amp; when a new row is added I want the conditional formatting to apply to that row as well but haven&#x27;t been able to find a solution.&lt;br /&gt;&#xA;Any document / solution I can read through to understand if it is possible and how to do it?&lt;/p&gt;&#xA;&lt;p&gt;Thanks!&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616229</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Slack notification once ECS service reach steady state</title>
+        <category scheme="https://stackoverflow.com/tags" term="notifications" />
+        <category scheme="https://stackoverflow.com/tags" term="amazon-ecs" />
+        <category scheme="https://stackoverflow.com/tags" term="slack" />
+        <author>
+            <name>sathish kumar</name>
+            <uri>https://stackoverflow.com/users/9822905</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616229/slack-notification-once-ecs-service-reach-steady-state" />
+        <published>2023-03-02T13:40:40Z</published>
+        <updated>2023-03-02T13:42:20Z</updated>
+        <summary type="html">
+            &lt;pre&gt;&lt;code&gt;Is there is any way to send the slack notification to a channel, if the AWS ECS service reach steady state after the deployment completed which was triggered from Jenkins.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Trying to get the ECS service steady state and send it as slack notification after deployment completed.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616155</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Upgrading .NET Core application from .NET 5.0 to .NET 7.0</title>
+        <category scheme="https://stackoverflow.com/tags" term="asp.net-core" />
+        <category scheme="https://stackoverflow.com/tags" term="asp.net-core-webapi" />
+        <category scheme="https://stackoverflow.com/tags" term="upgrade" />
+        <category scheme="https://stackoverflow.com/tags" term=".net-5" />
+        <category scheme="https://stackoverflow.com/tags" term=".net-7.0" />
+        <author>
+            <name>IntelligentCancer</name>
+            <uri>https://stackoverflow.com/users/7458648</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616155/upgrading-net-core-application-from-net-5-0-to-net-7-0" />
+        <published>2023-03-02T13:34:49Z</published>
+        <updated>2023-03-02T13:42:07Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have a project which has a backend api on .NET 5.0 and a frontend on React.js. I&#x27;m trying to upgrade the project to .NET 7.0.&lt;/p&gt;&#xA;&lt;p&gt;This is the code from &lt;code&gt;startup.cs&lt;/code&gt; which throws an exception after I upgrade the target framework to .NET 7.0:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt; app.UseMvc(routeBuilder =&amp;gt;&#xA;            {&#xA;                routeBuilder.MapODataServiceRoute(&amp;quot;odata&amp;quot;, &amp;quot;odata&amp;quot;, GetEdmModel(app.ApplicationServices));&#xA;                routeBuilder.EnableDependencyInjection(); &#xA;            });&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;System.ArgumentNullException: &#x27;Value cannot be null. Arg_ParamName_Name&#x27;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;I&#x27;m using &lt;code&gt;Microsoft.AspNetCore.OData&lt;/code&gt; (7.5.7); I tried upgrading this to latest version but it caused more reference issues.&lt;/p&gt;&#xA;&lt;p&gt;I need assistance on how to resolve this.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616146</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Why does the quantile function in NumPy return values in between the values from the input array?</title>
+        <category scheme="https://stackoverflow.com/tags" term="python" />
+        <category scheme="https://stackoverflow.com/tags" term="python-3.x" />
+        <category scheme="https://stackoverflow.com/tags" term="numpy" />
+        <category scheme="https://stackoverflow.com/tags" term="statistics" />
+        <author>
+            <name>Saniaaa</name>
+            <uri>https://stackoverflow.com/users/19458389</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616146/why-does-the-quantile-function-in-numpy-return-values-in-between-the-values-from" />
+        <published>2023-03-02T13:34:19Z</published>
+        <updated>2023-03-02T13:41:15Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am trying to understand how the &lt;code&gt;numpy.quantile&lt;/code&gt; function is working.&lt;/p&gt;&#xA;&lt;p&gt;I got the expected values for 0.25 and 0.5 quantiles but 0.75 quantile seems to be doing something different.&lt;/p&gt;&#xA;&lt;p&gt;Data: 13, 21, 21, 40, 42, 48, 55, 72&lt;/p&gt;&#xA;&lt;p&gt;0.25*(8&#x2B;1) = 2.25 ~ 2nd value of the dataset chosen =&amp;gt; 21&lt;/p&gt;&#xA;&lt;p&gt;0.50*(8&#x2B;1) = 4.5 ~ average of 4th and 5th value =&amp;gt; 41&lt;/p&gt;&#xA;&lt;p&gt;0.75*(8&#x2B;1) = 6.75 ~ 7th value of the dataset chosen =&amp;gt; 55 (however, python gives 49.75 as the answer here.)&lt;/p&gt;&#xA;&lt;p&gt;Code and output:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;import matplotlib.pyplot as plt&#xA;import numpy as np&#xA;&#xA;values = [13, 21, 21, 40, 42, 48, 55, 72]&#xA;print(len(values))&#xA;x = np.quantile(values, [0, 0.25, 0.5, 0.75, 1])&#xA;print(x)&#xA;data = [13, 21, 21, 40, 42, 48, 55, 72]  # [1, 3, 5, 9, 20]&#xA;B = plt.boxplot(data)&#xA;print([item.get_ydata() for item in B[&#x27;boxes&#x27;]])&#xA;q1 = [round(min(item.get_ydata()), 2) for item in B[&#x27;boxes&#x27;]]&#xA;q3 = [round(max(item.get_ydata()), 2) for item in B[&#x27;boxes&#x27;]]&#xA;print(f&#x27;Q1: {q1}\n&#x27;&#xA;      f&#x27;Q3: {q3}&#x27;)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Output:&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-none prettyprint-override&quot;&gt;&lt;code&gt;8&#xA;[13.   21.   41.   49.75 72.  ]&#xA;[array([21.  , 21.  , 49.75, 49.75, 21.  ])]&#xA;Q1: [21.0]&#xA;Q3: [49.75]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616128</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Error retrieving a collection from Firestore</title>
+        <category scheme="https://stackoverflow.com/tags" term="ios" />
+        <category scheme="https://stackoverflow.com/tags" term="swift" />
+        <category scheme="https://stackoverflow.com/tags" term="firebase" />
+        <category scheme="https://stackoverflow.com/tags" term="google-cloud-firestore" />
+        <category scheme="https://stackoverflow.com/tags" term="swiftui" />
+        <author>
+            <name>xplayz</name>
+            <uri>https://stackoverflow.com/users/14665129</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616128/error-retrieving-a-collection-from-firestore" />
+        <published>2023-03-02T13:32:51Z</published>
+        <updated>2023-03-02T13:42:11Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have a collection of users and every user have a collection of properties called portfolio,&#xA;I am able to read the data but once im trying to make a copy of the document im facing an error &amp;quot;Trailing closure passed to parameter of type &#x27;FirestoreSource&#x27; that does not accept a closure&amp;quot;.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;struct PortfolioView: View {&#xA;    &#xA;    //    var user: User&#xA;    @State var portfolioItems: [Property] = []&#xA;    private var db = Firestore.firestore()&#xA;    &#xA;    &#xA;    @State private var viewModel = PortfolioViewModel()&#xA;    &#xA;    @State private var showingAddScreen = false&#xA;    @State var myDic: [Any] = []&#xA;    &#xA;    @EnvironmentObject var portfolioListViewModel: PortfolioViewModel&#xA;    &#xA;    &#xA;    var body: some View {&#xA;        NavigationView {&#xA;            List(portfolioItems) { property in&#xA;                PropertyCell(property: property)&#xA;            }&#xA;            .onAppear {&#xA;                getPortfolioItems()&#xA;            }&#xA;        }&#xA;    }&#xA;&#xA;&#xA;    private func getPortfolioItems() {    &#xA;        if let currentUser = Auth.auth().currentUser {&#xA;            let userID = currentUser.uid&#xA;            print(&amp;quot;User ID: \(userID)&amp;quot;)&#xA;            &#xA;            &#xA;            // assuming you have a reference to the Firestore database&#xA;            &#xA;            // assuming you have the user&#x27;s ID stored in a variable called &amp;quot;userID&amp;quot;&#xA;            let userRef = db.collection(&amp;quot;users&amp;quot;).document(userID)&#xA;            &#xA;            // access the &amp;quot;portfolio&amp;quot; subcollection for the user&#xA;            let portfolioCollection = userRef.collection(&amp;quot;portfolio&amp;quot;)&#xA;            &#xA;            // create an empty array to store the posrtfolio properties&#xA;            var portfolioArray = [Property]()&#xA;        &#xA;            portfolioCollection.getDocuments() { (querySnapshot, err) in&#xA;                if let err = err {&#xA;                    print(&amp;quot;Error getting documents: \(err)&amp;quot;)&#xA;                } else {&#xA;                    for document in querySnapshot!.documents {&#xA;                        let dictionary =  document.data()&#xA;                        //print(&amp;quot;\(document.documentID) =&amp;gt; \(document.data())&amp;quot;)&#xA;                        print(dictionary[&amp;quot;property_address&amp;quot;]!)&#xA;                        myDic.append(dictionary)&#xA;                        print(myDic.count)&#xA;            &#xA;                    }&#xA;                }&#xA;                myDic.forEach({ (dictionary) in&#xA;                    print(dictionary)&#xA;                    let property = Property(address:dictionary[&amp;quot;property_address&amp;quot;],&#xA;                                           bath: dictionary[&amp;quot;property_baths&amp;quot;],&#xA;                                           room: dictionary[&amp;quot;property_beds&amp;quot;],&#xA;                                           size: dictionary[&amp;quot;property_price&amp;quot;],&#xA;                                           price: dictionary[&amp;quot;property_size&amp;quot;])&#xA;&#xA;                })&#xA;                &#xA;            }&#xA;    }&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I have tried to make the of the document out side the scope and i faced an error &amp;quot;Value of type &#x27;Any&#x27; has no subscripts&amp;quot;&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616076</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Saving div contents by overwriting an existing file</title>
+        <category scheme="https://stackoverflow.com/tags" term="javascript" />
+        <author>
+            <name>exp8j</name>
+            <uri>https://stackoverflow.com/users/16698699</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616076/saving-div-contents-by-overwriting-an-existing-file" />
+        <published>2023-03-02T13:28:24Z</published>
+        <updated>2023-03-02T13:41:28Z</updated>
+        <summary type="html">
+            &lt;p&gt;In a Windows environment, the following javascript function saves the contents of &amp;quot;mydiv&amp;quot; to &amp;quot;myfile.html&amp;quot;&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;function Save() { &#xA;   var a = document.body.appendChild(document.createElement(&amp;quot;a&amp;quot;));  &#xA;   a.download = &amp;quot;myfile.html&amp;quot;; &#xA;   a.href = &amp;quot;data:text/html,&amp;quot; &#x2B; document.getElementById(&amp;quot;mydiv&amp;quot;).innerHTML; &#xA;   a.click(); &#xA;} &#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;My problem is that when I keep calling this function, it automatically renames&#xA;the saved file as myfile(1).html, myfile(2).html,... etc.&#xA;How can I force it to always overwrite the initially saved myfile.html, i.e, keep the same name?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616075</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">How to account for blank value in excel?</title>
+        <category scheme="https://stackoverflow.com/tags" term="excel" />
+        <category scheme="https://stackoverflow.com/tags" term="excel-formula" />
+        <author>
+            <name>Meliodus123</name>
+            <uri>https://stackoverflow.com/users/10543998</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616075/how-to-account-for-blank-value-in-excel" />
+        <published>2023-03-02T13:28:24Z</published>
+        <updated>2023-03-02T13:42:15Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am trying to have excel notify me if its been 30 days after a certain date. The problem is if the date column is empty the Excel function is returning &amp;quot;No&amp;quot; (The false output in my logic test), instead of a blank.&lt;/p&gt;&#xA;&lt;p&gt;This is the forumla I used.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;=IF(R5&amp;lt;=30, &amp;quot;Yes&amp;quot;, IF(R5&amp;gt;30, &amp;quot;No&amp;quot;, IF(R5=&amp;quot;&amp;quot;, &amp;quot;&amp;quot;)))&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;This is the forumla of the column it is pulling data from&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;=IF(F5=&amp;quot;&amp;quot;,&amp;quot;&amp;quot;,NETWORKDAYS(F5,TODAY()))&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Is there any way to return &amp;quot;Yes&amp;quot;, if the date is within 30 days, &amp;quot;No&amp;quot; if the date is greater than 30 days and a blank if there is no date?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75616018</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">How to use select statement to query only negative value in oracle sql</title>
+        <category scheme="https://stackoverflow.com/tags" term="oracle" />
+        <category scheme="https://stackoverflow.com/tags" term="sqlplus" />
+        <author>
+            <name>Hoong wai kong</name>
+            <uri>https://stackoverflow.com/users/14328183</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75616018/how-to-use-select-statement-to-query-only-negative-value-in-oracle-sql" />
+        <published>2023-03-02T13:22:46Z</published>
+        <updated>2023-03-02T13:42:05Z</updated>
+        <summary type="html">
+            &lt;pre&gt;&lt;code&gt;table_a &#xA;&#xA;billno    desc        qty    amount&#xA;10324    orange       -1     -1.00&#xA;10324    apple         1      3.00&#xA;10324    papaya        1      2.00&#xA;&#xA;10431    water melon   1      2.00&#xA;10431    kiwi          1      3.00   &#xA;&#xA;10233    banana       -1     -2.50&#xA;10233    mango         1      4.00&#xA;..&#xA;.. &#xA;total 378 records&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Hi, how to use select statement query desc,qty and amount have negative qty in the billno, if i don&#x27;t know the billno ?&lt;/p&gt;&#xA;&lt;p&gt;I had tried use sign(number) syntax, but result incorrect.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;select desc,qty,amount from table_a where sign(qty)=&#x27;-1&#x27;;&#xA;orange       -1     -1.00&#xA;banana       -1     -2.50&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;my goal&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;orange       -1     -1.00&#xA;apple         1      3.00&#xA;papaya        1      2.00  &#xA;&#xA;banana       -1     -2.50&#xA;mango         1      4.00&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;your help is much appreciated.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75615956</id>
+        <re:rank scheme="https://stackoverflow.com">-1</re:rank>
+        <title type="text">Create a query that uses string_split</title>
+        <category scheme="https://stackoverflow.com/tags" term="sql-server" />
+        <category scheme="https://stackoverflow.com/tags" term="tsql" />
+        <author>
+            <name>Selena</name>
+            <uri>https://stackoverflow.com/users/17280732</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75615956/create-a-query-that-uses-string-split" />
+        <published>2023-03-02T13:17:11Z</published>
+        <updated>2023-03-02T13:41:55Z</updated>
+        <summary type="html">
+            &lt;p&gt;Scenario: Create a query that will output the LegID and the CarriCode where in the MCode should matched on the 3rd table. I am using string_split to individually check if the MCode is existing in the 3rd table&lt;/p&gt;&#xA;&lt;p&gt;Sample table and data can be found here:&#xA;&lt;a href=&quot;http://sqlfiddle.com/#!18/f8bd9f&quot; rel=&quot;nofollow noreferrer&quot;&gt;http://sqlfiddle.com/#!18/f8bd9f&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The expected output is this:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;LegID, CarriCode&#xA;1        AB&#xA;3        AD&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;since CarriCode AB and AD has an MCode of  DJM_3R, DJM_1R respectively wherein their MCode is existing in dbo.EFTest table.&lt;/p&gt;&#xA;&lt;p&gt;My sample query looks like this:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;SELECT L.LegID, L.CarriCode&#xA;INTO #test&#xA;FROM dbo.Leg L &#xA;INNER JOIN dbo.[Carri] C WITH(NOLOCK) &#xA;    ON L.CarriCode = C.CarriCode &#xA;    AND CType = &#x27;H&#x27;&#xA;WHERE MCode IN (select MCode FROM string_split(MCode, &#x27;,&#x27;))&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Any ideas how can I output the correct data?&lt;/p&gt;&#xA;&lt;p&gt;in case the sql fiddle link didnt work, I attached the DML , ddl&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;--table1&#xA;CREATE TABLE [dbo].[Leg](&#xA;[LegID] [bigint] NOT NULL,&#xA;[CarriCode] [varchar](3) NOT NULL,&#xA;[FNumber] [char](4) NOT NULL,&#xA;[MCode] [varchar](8) NOT NULL)&#xA;&#xA;INSERT INTO [dbo].[Leg]&#xA;(&#xA;    [LegID],&#xA;    [CarriCode],&#xA;    [FNumber],&#xA;    [MCode]&#xA;)&#xA;VALUES&#xA;(1, &#x27;AB&#x27;, 2222, &#x27;DJM_3R&#x27;),&#xA;(2, &#x27;AC&#x27;, 1222, &#x27;DJM_5R&#x27;),&#xA;(3, &#x27;AD&#x27;, 1232, &#x27;DJM_1R&#x27;)&#xA;&#xA; -- table2&#xA;CREATE TABLE [dbo].[Carri](&#xA;    [CarriCode] [varchar](3) NOT NULL,&#xA;    [CName] varchar(50) NOT NULL,&#xA;    [CType] [char](1) NOT NULL&#xA;) &#xA;&#xA;INSERT INTO [dbo].[Carri]&#xA;     ([CarriCode],&#xA;    [CName],&#xA;    [CType])&#xA;VALUES&#xA;    ( &#x27;AB&#x27;,&#x27;AB Test&#x27;, &#x27;H&#x27;),&#xA;    ( &#x27;AC&#x27;,&#x27;AC Test&#x27;, &#x27;L&#x27;),&#xA;    ( &#x27;AD&#x27;,&#x27;AD Test&#x27;, &#x27;H&#x27;)&#xA;&#xA;-- table 3&#xA;CREATE TABLE [dbo].[EFTest](&#xA;    [FCode] [varchar](20) NOT NULL,&#xA;    [Desc] [varchar](max) NOT NULL,&#xA;    [MCode] [varchar](max) NOT NULL,&#xA;)&#xA;&#xA;&#xA;INSERT INTO  [dbo].[EFTest]&#xA;VALUES (&#x27;CODE&#x27;, &#x27;test&#x27;, &#x27;DJM_3R, DJM_2R, DJM_1R, AAABBB&#x27;)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75615926</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">How to fire on Mouse Button?</title>
+        <category scheme="https://stackoverflow.com/tags" term="c#" />
+        <category scheme="https://stackoverflow.com/tags" term="unity3d" />
+        <category scheme="https://stackoverflow.com/tags" term="projectile" />
+        <author>
+            <name>Sheshukein</name>
+            <uri>https://stackoverflow.com/users/21319131</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75615926/how-to-fire-on-mouse-button" />
+        <published>2023-03-02T13:14:25Z</published>
+        <updated>2023-03-02T13:41:52Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#x27;m trying to do my first platformer at Unity. And have some problem with projectile. I found a tutorial, how create a projectile moving, but without trigger on Fire button. It is possible to change this script for firing on button? I tried to make it with if statement, but then projectile move only ones, it doesn&#x27;t fly :(&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;public class projectile : MonoBehaviour&#xA;{&#xA;    public GameObject player;&#xA;    public GameObject target;&#xA;&#xA;    private float playerX;&#xA;    private float targetX;&#xA;&#xA;    private float dist;&#xA;    private float nextX;&#xA;    private float baseY;&#xA;    private float height;&#xA;&#xA;    public float speed = 10f; &#xA;&#xA;&#xA;    void Start()&#xA;    {&#xA;        player = GameObject.FindGameObjectWithTag(&amp;quot;Player&amp;quot;);&#xA;        target = GameObject.FindGameObjectWithTag(&amp;quot;Enemy&amp;quot;);&#xA;    }&#xA;&#xA;    void Update()&#xA;    {  &#xA;       Fire();           &#xA;    }&#xA;&#xA;    public static Quaternion LookAtTarget(Vector2 rotation)&#xA;    {&#xA;        return Quaternion.Euler(0, 0, Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg); &#xA;    }&#xA;&#xA;    private void Fire()&#xA;    {       &#xA;        playerX = player.transform.position.x;&#xA;        targetX = target.transform.position.x;&#xA;&#xA;        dist = targetX - playerX;&#xA;        nextX = Mathf.MoveTowards(transform.position.x, targetX, speed * Time.deltaTime);&#xA;        baseY = Mathf.Lerp(player.transform.position.y, target.transform.position.y, (nextX - playerX) / dist);&#xA;        height = 2 * (nextX - playerX) * (nextX - targetX) / (-0.25f * dist * dist);&#xA;&#xA;        Vector3 movePosition = new Vector3(nextX, baseY &#x2B; height, transform.position.z);&#xA;        transform.rotation = LookAtTarget(movePosition - transform.position);&#xA;&#xA;        if (transform.position == target.transform.position)&#xA;        {&#xA;              Destroy(gameObject);&#xA;            &#xA;        }&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75615876</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Attempt to read property &quot;status&quot; on null</title>
+        <category scheme="https://stackoverflow.com/tags" term="php" />
+        <category scheme="https://stackoverflow.com/tags" term="mysql" />
+        <category scheme="https://stackoverflow.com/tags" term="laravel" />
+        <category scheme="https://stackoverflow.com/tags" term="vue.js" />
+        <author>
+            <name>AlbanianDev</name>
+            <uri>https://stackoverflow.com/users/16036180</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75615876/attempt-to-read-property-status-on-null" />
+        <published>2023-03-02T13:11:17Z</published>
+        <updated>2023-03-02T13:41:39Z</updated>
+        <summary type="html">
+            &lt;p&gt;First time i try to log in in my website the website crash with error &amp;quot; status on null&amp;quot; , sometimes when i refresh it lets . I cant find the error.&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-php prettyprint-override&quot;&gt;&lt;code&gt;public function authenticate()&#xA;{&#xA;        $this-&amp;gt;ensureIsNotRateLimited();&#xA;        if (!Auth::attempt($this-&amp;gt;only(&#x27;email&#x27;, &#x27;password&#x27;), $this-&amp;gt;boolean(&#x27;remember&#x27;))) {&#xA;            RateLimiter::hit($this-&amp;gt;throttleKey());&#xA;            throw ValidationException::withMessages([&#xA;                &#x27;email&#x27; =&amp;gt; trans(&#x27;auth.failed&#x27;),&#xA;            ]);&#xA;        }&#xA;&#xA;        $user = $this-&amp;gt;user();&#xA;        $customer = $user-&amp;gt;customer;&#xA;        if ($customer-&amp;gt;status !== CustomerStatus::Active-&amp;gt;value) { &#xA;&#xA;            /*the problem is here*/&#xA;            Auth::guard(&#x27;web&#x27;)-&amp;gt;logout();&#xA;&#xA;            $this-&amp;gt;session()-&amp;gt;invalidate();&#xA;            $this-&amp;gt;session()-&amp;gt;regenerateToken();&#xA;            throw ValidationException::withMessages([&#xA;                &#x27;email&#x27; =&amp;gt; &#x27;Your account has been disabled&#x27;,&#xA;            ]);&#xA;        }&#xA;&#xA;        RateLimiter::clear($this-&amp;gt;throttleKey());&#xA;    }&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Here is the customer status,&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;enum CustomerStatus: string&#xA;{&#xA;    case Active = &#x27;active&#x27;;&#xA;    case Disabled = &#x27;disabled&#x27;;&#xA;}&#xA;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;There ary many errors like this in my project , i tried this :&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;if ($customer-&amp;gt;status ?? &#x27;&#x27; !== CustomerStatus::Active-&amp;gt;value)&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;But then I cant log in , all my accounts become disabled.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75615805</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">SDL2 library on macOS Ventura</title>
+        <category scheme="https://stackoverflow.com/tags" term="c" />
+        <category scheme="https://stackoverflow.com/tags" term="macos" />
+        <category scheme="https://stackoverflow.com/tags" term="sdl-2" />
+        <author>
+            <name>pintel</name>
+            <uri>https://stackoverflow.com/users/21319075</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75615805/sdl2-library-on-macos-ventura" />
+        <published>2023-03-02T13:05:02Z</published>
+        <updated>2023-03-02T13:41:06Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have installed SDL with the command:&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-none prettyprint-override&quot;&gt;&lt;code&gt;brew install sdl2&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;However, I don&#x27;t know what to include in my .c file. Can anyone help me?&lt;/p&gt;&#xA;&lt;p&gt;I tried to &lt;code&gt;#include &amp;lt;SDL.h&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;SDL2.h&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;SDL/SDL2.h&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;SDL/SDL2_main.h&amp;gt;&lt;/code&gt; and compile with the command:&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-none prettyprint-override&quot;&gt;&lt;code&gt;gcc `sdl-config --cflags --libs` -o main.x main.c&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75615688</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Display all data in table form with Laravel 10</title>
+        <category scheme="https://stackoverflow.com/tags" term="php" />
+        <category scheme="https://stackoverflow.com/tags" term="html" />
+        <category scheme="https://stackoverflow.com/tags" term="laravel" />
+        <category scheme="https://stackoverflow.com/tags" term="laravel-blade" />
+        <category scheme="https://stackoverflow.com/tags" term="laravel-10" />
+        <author>
+            <name>Gxogac</name>
+            <uri>https://stackoverflow.com/users/18034585</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75615688/display-all-data-in-table-form-with-laravel-10" />
+        <published>2023-03-02T12:54:11Z</published>
+        <updated>2023-03-02T13:41:55Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have been stuck with this error about 3 hours either with error message &lt;code&gt;Undefined variable $certificates&lt;/code&gt; or &lt;code&gt;Call to a member function isEmpty() on array&lt;/code&gt;or any other errors. Actually, I wanna display certificate data belongs to user that logs in instead all data. But I got frustated, thats why I wanna display all data.&lt;/p&gt;&#xA;&lt;p&gt;Here&#x27;s my SaveController.php&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-php prettyprint-override&quot;&gt;&lt;code&gt;&amp;lt;?php&#xA;&#xA;namespace App\Http\Controllers;&#xA;&#xA;use Illuminate\Http\Request;&#xA;use App\Models\Certificate;&#xA;use Carbon\Carbon;&#xA;use Illuminate\Support\Facades\Auth;&#xA;&#xA;class SaveController extends Controller&#xA;{&#xA;    function store(Request $r)&#xA;    {&#xA;        $now = Carbon::now();&#xA;        $format = $now-&amp;gt;format(&#x27;D j-M-Y g:i:s.u A&#x27;);&#xA;        $user = Auth::user();&#xA;        $certificate = new Certificate();&#xA;        $certificate-&amp;gt;user_id = $user-&amp;gt;id;&#xA;        $certificate-&amp;gt;name = $r-&amp;gt;input(&#x27;name&#x27;);&#xA;        $certificate-&amp;gt;sha512 = $r-&amp;gt;input(&#x27;sha512&#x27;);&#xA;        $certificate-&amp;gt;time = $format;&#xA;        $certificate-&amp;gt;save();&#xA;        // $certificates = Certificate::where(&#x27;user_id&#x27;, $user-&amp;gt;id)-&amp;gt;orderBy(&#x27;time&#x27;)-&amp;gt;get();&#xA;        $certificates = Certificate::all();&#xA;        return redirect(&#x27;/&#x27;)-&amp;gt;with(compact(&#x27;certificates&#x27;));&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;and this is my index.blade.php&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-html prettyprint-override&quot;&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&#xA;&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&#xA;&amp;lt;head&amp;gt;&#xA;    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&#xA;    &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;IE=edge&amp;quot;&amp;gt;&#xA;    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;&#xA;    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;{{ asset(&#x27;css/app.css&#x27;) }}&amp;quot;&amp;gt;&#xA;    &amp;lt;script src=&amp;quot;{{ asset(&#x27;js/app.js&#x27;) }}&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#xA;    &amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#xA;    &amp;lt;title&amp;gt;Non-Academic Digital Certificate Validator (SHA-512)&amp;lt;/title&amp;gt;&#xA;&amp;lt;/head&amp;gt;&#xA;&amp;lt;body&amp;gt;&#xA;    @guest&#xA;        &amp;lt;header&amp;gt;&#xA;            &amp;lt;h1 id=&amp;quot;head1&amp;quot;&amp;gt;Non-Academic Digital Certificate Validator (SHA-512)&amp;lt;/h1&amp;gt;&#xA;            &amp;lt;div class=&amp;quot;auth&amp;quot;&amp;gt;&#xA;                &amp;lt;a href=&amp;quot;/login&amp;quot;&amp;gt;&amp;lt;button&amp;gt;Login&amp;lt;/button&amp;gt;&amp;lt;/a&amp;gt;&#xA;                &amp;lt;a href=&amp;quot;/register&amp;quot;&amp;gt;&amp;lt;button&amp;gt;Register&amp;lt;/button&amp;gt;&amp;lt;/a&amp;gt;&#xA;            &amp;lt;/div&amp;gt;&#xA;        &amp;lt;/header&amp;gt;&#xA;        &amp;lt;div class=&amp;quot;input&amp;quot;&amp;gt;&#xA;            &amp;lt;div id=&amp;quot;droppable-zone&amp;quot;&amp;gt;&#xA;                &amp;lt;div id=&amp;quot;droppable-zone-wrapper&amp;quot;&amp;gt;&#xA;                    &amp;lt;div id=&amp;quot;droppable-zone-text&amp;quot;&amp;gt;Drag &amp;amp; drop your certificate here OR click to browse&amp;lt;/div&amp;gt;&#xA;                &amp;lt;/div&amp;gt;&#xA;                &amp;lt;input class=&amp;quot;droppable-file&amp;quot; id=&amp;quot;input&amp;quot; type=&amp;quot;file&amp;quot; accept=&amp;quot;image/jpeg, image/png, application/pdf&amp;quot;&#xA;                    onchange=&amp;quot;hash()&amp;quot;&amp;gt;&#xA;            &amp;lt;/div&amp;gt;&#xA;        &amp;lt;/div&amp;gt;&#xA;        &amp;lt;div class=&amp;quot;output&amp;quot;&amp;gt;&#xA;            &amp;lt;textarea id=&amp;quot;output&amp;quot; placeholder=&amp;quot;SHA-512 Checksum&amp;quot; readonly&amp;gt;&amp;lt;/textarea&amp;gt;&#xA;        &amp;lt;/div&amp;gt;&#xA;        &amp;lt;div class=&amp;quot;remove&amp;quot;&amp;gt;&#xA;            &amp;lt;button id=&amp;quot;remove&amp;quot; onclick=&amp;quot;clearInput()&amp;quot;&amp;gt;Remove&amp;lt;/button&amp;gt;&#xA;        &amp;lt;/div&amp;gt;&#xA;    @endguest&#xA;    @auth&#xA;        &amp;lt;header&amp;gt;&#xA;            &amp;lt;h1 id=&amp;quot;head1&amp;quot;&amp;gt;Non-Academic Digital Certificate Validator (SHA-512)&amp;lt;/h1&amp;gt;&#xA;            &amp;lt;div class=&amp;quot;auth&amp;quot;&amp;gt;&#xA;                &amp;lt;form class=&amp;quot;search&amp;quot;&amp;gt;&#xA;                    &amp;lt;input type=&amp;quot;text&amp;quot; placeholder=&amp;quot;Search...&amp;quot;&amp;gt;&#xA;                &amp;lt;/form&amp;gt;&#xA;                &amp;lt;form action=&amp;quot;{{ route(&#x27;logout&#x27;) }}&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;&#xA;                    @csrf&#xA;                    &amp;lt;button&amp;gt;Logout&amp;lt;/button&amp;gt;&#xA;                &amp;lt;/form&amp;gt;&#xA;            &amp;lt;/div&amp;gt;&#xA;        &amp;lt;/header&amp;gt;&#xA;        &amp;lt;div class=&amp;quot;input&amp;quot;&amp;gt;&#xA;            &amp;lt;div id=&amp;quot;droppable-zone&amp;quot;&amp;gt;&#xA;                &amp;lt;div id=&amp;quot;droppable-zone-wrapper&amp;quot;&amp;gt;&#xA;                    &amp;lt;div id=&amp;quot;droppable-zone-text&amp;quot;&amp;gt;Drag &amp;amp; drop your certificate here OR click to browse&amp;lt;/div&amp;gt;&#xA;                &amp;lt;/div&amp;gt;&#xA;                &amp;lt;input class=&amp;quot;droppable-file&amp;quot; id=&amp;quot;input&amp;quot; type=&amp;quot;file&amp;quot; accept=&amp;quot;image/jpeg, image/png, application/pdf&amp;quot; onchange=&amp;quot;hash()&amp;quot;&amp;gt;&#xA;            &amp;lt;/div&amp;gt;&#xA;        &amp;lt;/div&amp;gt;&#xA;        &amp;lt;div class=&amp;quot;output&amp;quot;&amp;gt;&#xA;            &amp;lt;textarea id=&amp;quot;output&amp;quot; placeholder=&amp;quot;SHA-512 Checksum&amp;quot; readonly&amp;gt;&amp;lt;/textarea&amp;gt;&#xA;        &amp;lt;/div&amp;gt;&#xA;        &amp;lt;div class=&amp;quot;remove&amp;quot;&amp;gt;&#xA;            &amp;lt;button id=&amp;quot;remove&amp;quot; onclick=&amp;quot;clearInput()&amp;quot;&amp;gt;Remove&amp;lt;/button&amp;gt;&#xA;        &amp;lt;/div&amp;gt;&#xA;        &amp;lt;div class=&amp;quot;save&amp;quot;&amp;gt;&#xA;            &amp;lt;form action=&amp;quot;{{ route(&#x27;save&#x27;) }}&amp;quot; method=&amp;quot;POST&amp;quot;&amp;gt;&#xA;                @csrf&#xA;                &amp;lt;input type=&amp;quot;hidden&amp;quot; name=&amp;quot;name&amp;quot; id=&amp;quot;namefile&amp;quot; readonly&amp;gt;&#xA;                &amp;lt;input type=&amp;quot;hidden&amp;quot; name=&amp;quot;sha512&amp;quot; id=&amp;quot;hash&amp;quot; readonly&amp;gt;&#xA;                &amp;lt;button id=&amp;quot;save&amp;quot; type=&amp;quot;submit&amp;quot; disabled&amp;gt;Save&amp;lt;/button&amp;gt;&#xA;            &amp;lt;/form&amp;gt;&#xA;        &amp;lt;/div&amp;gt;&#xA;        &amp;lt;table&amp;gt;&#xA;            &amp;lt;thead&amp;gt;&#xA;                &amp;lt;tr&amp;gt;&#xA;                    &amp;lt;th&amp;gt;Name&amp;lt;/th&amp;gt;&#xA;                    &amp;lt;th&amp;gt;Date&amp;lt;/th&amp;gt;&#xA;                    &amp;lt;th&amp;gt;SHA-512&amp;lt;/th&amp;gt;&#xA;                &amp;lt;/tr&amp;gt;&#xA;            &amp;lt;/thead&amp;gt;&#xA;            &amp;lt;tbody&amp;gt;&#xA;                {{-- @if ($certificates-&amp;gt;isEmpty())&#xA;                    &amp;lt;tr&amp;gt;&#xA;                        &amp;lt;td colspan=&amp;quot;3&amp;quot;&amp;gt;No Data&amp;lt;/td&amp;gt;&#xA;                    &amp;lt;/tr&amp;gt;&#xA;                @else --}}&#xA;                    @foreach ($certificates as $c)&#xA;                        &amp;lt;tr&amp;gt;&#xA;                            &amp;lt;td&amp;gt;{{ $c-&amp;gt;name }}&amp;lt;/td&amp;gt;&#xA;                            &amp;lt;td&amp;gt;{{ $c-&amp;gt;time }}&amp;lt;/td&amp;gt;&#xA;                            &amp;lt;td&amp;gt;{{ $c-&amp;gt;sha512 }}&amp;lt;/td&amp;gt;&#xA;                        &amp;lt;/tr&amp;gt;&#xA;                    @endforeach&#xA;                {{-- @endif --}}&#xA;            &amp;lt;/tbody&amp;gt;&#xA;        &amp;lt;/table&amp;gt;&#xA;    @endauth&#xA;&amp;lt;/body&amp;gt;&#xA;&amp;lt;/html&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;this is my Routes web.php&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-php prettyprint-override&quot;&gt;&lt;code&gt;&amp;lt;?php&#xA;&#xA;use App\Http\Controllers\RegisterController;&#xA;use App\Http\Controllers\LoginController;&#xA;use App\Http\Controllers\SaveController;&#xA;use Illuminate\Support\Facades\Route;&#xA;&#xA;/*&#xA;|--------------------------------------------------------------------------&#xA;| Web Routes&#xA;|--------------------------------------------------------------------------&#xA;|&#xA;| Here is where you can register web routes for your application. These&#xA;| routes are loaded by the RouteServiceProvider and all of them will&#xA;| be assigned to the &amp;quot;web&amp;quot; middleware group. Make something great!&#xA;|&#xA;*/&#xA;&#xA;Route::get(&#x27;/&#x27;, function () {&#xA;    return view(&#x27;index&#x27;);&#xA;});&#xA;Route::get(&#x27;/register&#x27;, [RegisterController::class, &#x27;index&#x27;]);&#xA;Route::post(&#x27;/register&#x27;, [RegisterController::class, &#x27;store&#x27;]);&#xA;Route::get(&#x27;/login&#x27;, [LoginController::class, &#x27;index&#x27;]);&#xA;Route::post(&#x27;/login&#x27;, [LoginController::class, &#x27;auth&#x27;]);&#xA;Route::post(&#x27;/save&#x27;, [SaveController::class, &#x27;store&#x27;])-&amp;gt;name(&#x27;save&#x27;);&#xA;Route::post(&#x27;/logout&#x27;, [LoginController::class, &#x27;logout&#x27;])-&amp;gt;name(&#x27;logout&#x27;);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I have define all classes on web.php too.&lt;/p&gt;&#xA;&lt;p&gt;Ive tried modified those 2 file but theres nothing work, only return error message. Could someone help me? thx in advance&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75615417</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Azure APIM foward custom header and change backend URI</title>
+        <category scheme="https://stackoverflow.com/tags" term="azure" />
+        <category scheme="https://stackoverflow.com/tags" term="url-rewriting" />
+        <category scheme="https://stackoverflow.com/tags" term="azure-api-management" />
+        <author>
+            <name>nD0613</name>
+            <uri>https://stackoverflow.com/users/18481297</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75615417/azure-apim-foward-custom-header-and-change-backend-uri" />
+        <published>2023-03-02T12:28:02Z</published>
+        <updated>2023-03-02T13:41:17Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am a newbie with azure APIM. I am trying to implement such a functionality where I need to make sure that when the client sends the request with the proper subscription-key and wants to add a custom header to route to the appropriate backend service URL. Without adding a Web Service URL only API URL Suffix I have.&#xA;Otherwise, I have to create 10 same apis with little changes in the URL.&lt;/p&gt;&#xA;&lt;p&gt;The client adds the custom header in his request to base URL &lt;a href=&quot;https://my-app-api.azure-api.net/api/customers&quot; rel=&quot;nofollow noreferrer&quot;&gt;https://my-app-api.azure-api.net/api/customers&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ocp-Apim-Subscription-Key: Keys-for-auth &lt;br&gt;&lt;br/&gt;&#xA;&amp;quot;X-subjectName&amp;quot;: my-subject-value&lt;/p&gt;&#xA;&lt;p&gt;When the request came to the backend to override the URI with that header, I need to extract the custom header from the call and override the backend URI. Can I do it via policies?&lt;/p&gt;&#xA;&lt;h1&gt;&lt;/h1&gt;&#xA;&lt;p&gt;After overriding my backend URI it should look like this:&#xA;&lt;a href=&quot;https://my.api.com/api/v1/my-subject-value&quot; rel=&quot;nofollow noreferrer&quot;&gt;https://my.api.com/api/v1/my-subject-value&lt;/a&gt; /customers&lt;/p&gt;&#xA;&lt;p&gt;Thank you!&lt;/p&gt;&#xA;&lt;hr /&gt;&#xA;&lt;p&gt;Policy from the comments:&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-xml prettyprint-override&quot;&gt;&lt;code&gt;&amp;lt;inbound&amp;gt; &#xA;     &amp;lt;set-variable name=&amp;quot;myvar&amp;quot; value=&amp;quot;@(context.Request.Headers.GetValueOrDefault(&amp;quot;my-header&amp;quot;,&amp;quot;&amp;quot;))&amp;quot; /&amp;gt; &#xA;     &amp;lt;set-backend-service base-url=&amp;quot;my-api-backend.com{{myvar}}&amp;quot; /&amp;gt;    &#xA;&amp;lt;/inbound&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75614818</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">Select all rows in kendo grid even other pages too</title>
+        <category scheme="https://stackoverflow.com/tags" term="kendo-grid" />
+        <author>
+            <name>sagar</name>
+            <uri>https://stackoverflow.com/users/12988511</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75614818/select-all-rows-in-kendo-grid-even-other-pages-too" />
+        <published>2023-03-02T11:28:47Z</published>
+        <updated>2023-03-02T13:41:34Z</updated>
+        <summary type="html">
+            &lt;p&gt;i can use kendogrid table and i wanded to select all records with other pages. but the data is too large. so when i checked select all checkbox, the page gets stuck. I found an online solution which is linked &lt;a href=&quot;https://docs.telerik.com/kendo-ui/knowledge-base/checkbox-selection-select-all-rows-all-pages&quot; rel=&quot;nofollow noreferrer&quot;&gt;here&lt;/a&gt;. But due to large data it was of no use to me. so please give me solution friends. here is my code. You can download the data from &lt;a href=&quot;https://file.io/TClkyXQ4Ig5C&quot; rel=&quot;nofollow noreferrer&quot;&gt;here&lt;/a&gt;. add into below code url parameter in kendo-grid.&lt;/p&gt;&#xA;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&amp;quot;example&amp;quot;&amp;gt;&#xA;    &amp;lt;div id=&amp;quot;grid&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&#xA;    &amp;lt;script&amp;gt;&#xA;        var oldPageSize = 0;&#xA;&#xA;        function onChange(e) {&#xA;            console.log(this.selectedKeyNames())&#xA;            kendoConsole.log(&amp;quot;The selected product ids are: [&amp;quot; &#x2B; this.selectedKeyNames().join(&amp;quot;, &amp;quot;) &#x2B; &amp;quot;]&amp;quot;);&#xA;        };&#xA;&#xA;        function onClick(e) {&#xA;            var grid = $(&amp;quot;#grid&amp;quot;).data(&amp;quot;kendoGrid&amp;quot;);&#xA;&#xA;            oldPageSize = grid.dataSource.pageSize();&#xA;            grid.dataSource.pageSize(grid.dataSource.data().length);&#xA;&#xA;            if (grid.dataSource.data().length === grid.select().length) {&#xA;                grid.clearSelection();&#xA;            } else {&#xA;                grid.select(&amp;quot;tr&amp;quot;);&#xA;            }&#xA;&#xA;            grid.dataSource.pageSize(oldPageSize);&#xA;        }&#xA;&#xA;        $(document).ready(function() {&#xA;&#xA;            $(&amp;quot;#grid&amp;quot;).kendoGrid({&#xA;                dataSource: {&#xA;                    pageSize: 100,&#xA;                    transport: {&#xA;                        read: {&#xA;                            url: &amp;quot;http://example.com/kendo-demo/product.php&amp;quot;,&#xA;                            dataType: &amp;quot;jsonp&amp;quot;&#xA;                        }&#xA;                    },&#xA;                    batch: false,&#xA;                    schema: {&#xA;                        model: {&#xA;                            id: &amp;quot;ProductID&amp;quot;&#xA;                        }&#xA;                    }&#xA;                },&#xA;                height: 500,&#xA;                noRecords: true,&#xA;                pageable: true,&#xA;                scrollable: false,&#xA;                serverPaging: true,&#xA;                serverSorting: true,&#xA;                persistSelection: true,&#xA;                sortable: true,&#xA;                change: onChange,&#xA;                columns: [{&#xA;                        selectable: true,&#xA;                        width: &amp;quot;50px&amp;quot;&#xA;                    },&#xA;                    {&#xA;                        field: &amp;quot;ProductName&amp;quot;,&#xA;                        title: &amp;quot;Product Name&amp;quot;&#xA;                    },&#xA;                    {&#xA;                        field: &amp;quot;UnitPrice&amp;quot;,&#xA;                        title: &amp;quot;Unit Price&amp;quot;,&#xA;                        format: &amp;quot;{0:c}&amp;quot;&#xA;                    },&#xA;                    {&#xA;                        field: &amp;quot;UnitsInStock&amp;quot;,&#xA;                        title: &amp;quot;Units In Stock&amp;quot;&#xA;                    },&#xA;                    {&#xA;                        field: &amp;quot;Discontinued&amp;quot;&#xA;                    }&#xA;                ]&#xA;            });&#xA;&#xA;            var grid = $(&amp;quot;#grid&amp;quot;).data(&amp;quot;kendoGrid&amp;quot;);&#xA;&#xA;            grid.thead.on(&amp;quot;click&amp;quot;, &amp;quot;.k-checkbox&amp;quot;, onClick);&#xA;        });&#xA;    &amp;lt;/script&amp;gt;&#xA;    &amp;lt;div class=&amp;quot;box wide&amp;quot;&amp;gt;&#xA;        &amp;lt;h4&amp;gt;Console log&amp;lt;/h4&amp;gt;&#xA;        &amp;lt;div class=&amp;quot;console&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&#xA;    &amp;lt;/div&amp;gt;&#xA;    &amp;lt;style&amp;gt;&#xA;        .console div {&#xA;            height: 6em;&#xA;        }&#xA;    &amp;lt;/style&amp;gt;&#xA;&amp;lt;/div&amp;gt;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I hope I get the answer to my question&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75613329</id>
+        <re:rank scheme="https://stackoverflow.com">-4</re:rank>
+        <title type="text">for-select reaches 100% CPU usage due to empty default definition</title>
+        <category scheme="https://stackoverflow.com/tags" term="go" />
+        <category scheme="https://stackoverflow.com/tags" term="select" />
+        <category scheme="https://stackoverflow.com/tags" term="cpu" />
+        <author>
+            <name>Jamsen</name>
+            <uri>https://stackoverflow.com/users/21295692</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75613329/for-select-reaches-100-cpu-usage-due-to-empty-default-definition" />
+        <published>2023-03-02T09:11:04Z</published>
+        <updated>2023-03-02T13:41:44Z</updated>
+        <summary type="html">
+            &lt;p&gt;When I run the following code, something is going wrong.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;var ch chan int&#xA;        for {&#xA;            select {&#xA;            case &amp;lt;-ch:&#xA;                return&#xA;            default:&#xA;            }&#xA;        }&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;What can I do to prevent 100% CPU usage?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75611449</id>
+        <re:rank scheme="https://stackoverflow.com">-2</re:rank>
+        <title type="text">In a summary search, you must sort by a result field with a summary function error</title>
+        <category scheme="https://stackoverflow.com/tags" term="netsuite" />
+        <category scheme="https://stackoverflow.com/tags" term="suitescript" />
+        <category scheme="https://stackoverflow.com/tags" term="suitescript2.0" />
+        <author>
+            <name>Maira S</name>
+            <uri>https://stackoverflow.com/users/15989047</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75611449/in-a-summary-search-you-must-sort-by-a-result-field-with-a-summary-function-err" />
+        <published>2023-03-02T04:53:01Z</published>
+        <updated>2023-03-02T13:41:34Z</updated>
+        <summary type="html">
+            &lt;p&gt;I have created saved search to group by pay code type and sum amount.&lt;/p&gt;&#xA;&lt;p&gt;Pay code : Sequence--&amp;gt;  Group,&#xA;Amount--&amp;gt;   Sum&lt;/p&gt;&#xA;&lt;p&gt;Sort by Pay code : Sequence ASC&lt;/p&gt;&#xA;&lt;p&gt;when I export this search to script and run, i am getting following error.&lt;/p&gt;&#xA;&lt;p&gt;{&amp;quot;type&amp;quot;:&amp;quot;error.SuiteScriptError&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;INVALID_SUMMARY_SRCH&amp;quot;,&amp;quot;message&amp;quot;:&amp;quot;In a summary search, you must sort by a result field with a summary function. Please go back and correct the sort by field on the results tab.&amp;quot;,&amp;quot;stack&amp;quot;:[&amp;quot;createError(N/error)&amp;quot;,&amp;quot;getEmployeeAmountTotals(/SuiteScripts/suitelet_transfer_funds_screen.js:160)&amp;quot;,&amp;quot;onRequest(/SuiteScripts/suitelet_transfer_funds_screen.js:185)&amp;quot;],&amp;quot;cause&amp;quot;:{&amp;quot;type&amp;quot;:&amp;quot;internal error&amp;quot;,&amp;quot;code&amp;quot;:&amp;quot;INVALID_SUMMARY_SRCH&amp;quot;,&amp;quot;details&amp;quot;:&amp;quot;In a summary search, you must sort by a result field with a summary function. Please go back and correct the sort by field on the results tab.&amp;quot;,&amp;quot;userEvent&amp;quot;:null,&amp;quot;stackTrace&amp;quot;:[&amp;quot;createError(N/error)&amp;quot;,&amp;quot;getEmployeeAmountTotals(/SuiteScripts/suitelet_transfer_funds_screen.js:160)&amp;quot;,&amp;quot;onRequest(/SuiteScripts/suitelet_transfer_funds_screen.js:185)&amp;quot;],&amp;quot;notifyOff&amp;quot;:false},&amp;quot;id&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;notifyOff&amp;quot;:false,&amp;quot;userFacing&amp;quot;:false}&lt;/p&gt;&#xA;&lt;p&gt;Whats wrong here? Please Help!&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75610814</id>
+        <re:rank scheme="https://stackoverflow.com">1</re:rank>
+        <title type="text">Ruby openssl gem equivalent to openssl command for aes-256-cbc encryption</title>
+        <category scheme="https://stackoverflow.com/tags" term="ruby" />
+        <category scheme="https://stackoverflow.com/tags" term="aes" />
+        <author>
+            <name>Harry Wood</name>
+            <uri>https://stackoverflow.com/users/338265</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75610814/ruby-openssl-gem-equivalent-to-openssl-command-for-aes-256-cbc-encryption" />
+        <published>2023-03-02T02:29:14Z</published>
+        <updated>2023-03-02T13:41:59Z</updated>
+        <summary type="html">
+            &lt;p&gt;What is the ruby (cypher / pbkdf2_hmac incantations of the openssl gem) equivalent to encrypting with a command like this:&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;echo &#x27;Top secret text&#x27; | openssl enc -base64 -e -aes-256-cbc -salt -pass pass:&#x27;mypassword&#x27; -pbkdf2 -p&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;I&#x27;m trying to use the ruby openssl gem to do AES-256-CBC encryption of a plain text string. I found quite a few examples of how to do this, &lt;em&gt;but&lt;/em&gt; then I want to be able to give my friend the unix &lt;code&gt;openssl&lt;/code&gt; command necessary to decrypt it at the other end, which means I need to use the same settings and string concatenation approach that the unix command does.&lt;/p&gt;&#xA;&lt;p&gt;I figured out a pair of unix commands to encrypt and then decrypt. I&#x27;m using PBKDF2 key derivation. I have wrapped these commands in ruby code doing system call-outs, so my &lt;code&gt;encrypt_openssl_system_call&lt;/code&gt; is successfully the inverse of &lt;code&gt;decrypt&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I want my &lt;code&gt;open_ssl_gem_encrypt&lt;/code&gt; method to also be decryptable using &lt;code&gt;decrypt&lt;/code&gt;... and at the moment it nearly works because I&#x27;ve cheated and passed in the &lt;code&gt;@salt_used&lt;/code&gt;, &lt;code&gt;@key_used&lt;/code&gt;, and &lt;code&gt;@iv_used&lt;/code&gt;. Instead I will need to figure out the right way to call &lt;code&gt;OpenSSL::KDF.pbkdf2_hmac&lt;/code&gt; (or similar?) to do key derivation.&lt;/p&gt;&#xA;&lt;p&gt;But with matching those values I suppose I hoped to see it encrypt to the exact same cypher text, or at least come out with the right plain text. Weirdly it nearly works, producing the plain text but with 14 random characters at the start.&lt;/p&gt;&#xA;&lt;pre class=&quot;lang-rb prettyprint-override&quot;&gt;&lt;code&gt;require &#x27;openssl&#x27;&#xA;require &#x27;base64&#x27;&#xA;&#xA;def password&#xA;  &amp;quot;mypassword&amp;quot;&#xA;end&#xA;&#xA;def encrypt_openssl_system_call(plain_text)&#xA;  command = &amp;quot;echo &#x27;#{plain_text}&#x27; | openssl enc -base64 -e -aes-256-cbc -salt -pass pass:&#x27;#{password}&#x27; -pbkdf2 -p&amp;quot;&#xA;  puts command&#xA;  output = `#{command}`&#xA;  puts output&#xA;  raise(output) unless $?.success?&#xA;&#xA;  # Parse the actual used salt key and iv from this output&#xA;  rows = output.split(&amp;quot;\n&amp;quot;)&#xA;  @salt_used = [rows[0].split(&amp;quot;salt=&amp;quot;).last].pack(&#x27;H*&#x27;)&#xA;  @key_used = [rows[1].split(&amp;quot;key=&amp;quot;).last].pack(&#x27;H*&#x27;)&#xA;  @iv_used = [rows[2].split(&amp;quot;iv =&amp;quot;).last].pack(&#x27;H*&#x27;)&#xA;  encrypted = rows.last&#xA;&#xA;  encrypted.rstrip!&#xA;  encrypted&#xA;end&#xA;&#xA;def decrypt(encrypted)&#xA;  command = &amp;quot;echo &#x27;#{encrypted}&#x27; | openssl enc -base64 -d -aes-256-cbc -salt -pass pass:&#x27;#{password}&#x27; -pbkdf2&amp;quot;&#xA;  puts command&#xA;  output = `#{command}`&#xA;&#xA;  raise output unless $?.success?&#xA;&#xA;  output.rstrip&#xA;rescue RuntimeError =&amp;gt; e&#xA;  puts &amp;quot;&amp;gt;&amp;gt;&amp;gt; ERROR #{e.message}&amp;quot;&#xA;  puts e.backtrace&#xA;&#xA;  e.message&#xA;end&#xA;&#xA;def open_ssl_gem_encrypt(plain_text)&#xA;  # Key derivation (PBKDF2) not working yet&#xA; # salt = &#x27;Salted__&#x27; &#x2B; OpenSSL::Random.random_bytes(8)&#xA; # key = OpenSSL::KDF.pbkdf2_hmac(password, salt: salt, iterations: 10000, length: 32, hash: &amp;quot;sha1&amp;quot;)&#xA;&#xA;  salt = &#x27;Salted__&#x27; &#x2B; @salt_used&#xA;  key = @key_used&#xA;&#xA;  cipher = OpenSSL::Cipher.new(&#x27;AES-256-CBC&#x27;)&#xA;  cipher.encrypt&#xA;  cipher.key = key&#xA;  iv = @iv_used # cipher.random_iv&#xA;  cipher.iv  = iv&#xA;&#xA;  # Concatenate bits in hopefully the right order?!&#xA;  encrypted = salt&#xA;  encrypted &amp;lt;&amp;lt; iv&#xA;  encrypted &amp;lt;&amp;lt; cipher.update(plain_text)&#xA;  encrypted &amp;lt;&amp;lt; cipher.final&#xA;&#xA;  Base64.encode64(encrypted).gsub(/\n/, &#x27;&#x27;)&#xA;end&#xA;&#xA;PLAIN_TEXT = &amp;quot;Top secret text&amp;quot;&#xA;&#xA;puts &amp;quot;encrypt_openssl_system_call(#{PLAIN_TEXT.dump})&amp;quot;&#xA;encrypted = encrypt_openssl_system_call(PLAIN_TEXT)&#xA;puts &amp;quot;openssl command produced &#x27;#{encrypted}&#x27;&amp;quot;&#xA;&#xA;puts &amp;quot;\n&amp;quot;&#xA;puts &amp;quot;decrypt(&#x27;#{encrypted}&#x27;)&amp;quot;&#xA;decrypted = decrypt(encrypted)&#xA;puts &amp;quot;openssl command decryption produced &#x27;#{decrypted}&#x27;&amp;quot;&#xA;&#xA;puts &amp;quot;So far so good!&amp;quot; if decrypted==PLAIN_TEXT&#xA;&#xA;puts &amp;quot;\n&amp;quot;&#xA;puts &amp;quot;open_ssl_gem_encrypt(#{PLAIN_TEXT.dump})&amp;quot;&#xA;encrypted_b = open_ssl_gem_encrypt(PLAIN_TEXT)&#xA;puts &amp;quot;OpenSSL gem produced &#x27;#{encrypted_b}&#x27;&amp;quot;&#xA;&#xA;puts &amp;quot;\n&amp;quot;&#xA;puts &amp;quot;decrypt(#{encrypted_b.dump})&amp;quot;&#xA;decrypted_b = decrypt(encrypted_b)&#xA;puts &amp;quot;openssl command decryption produced &#x27;#{decrypted_b}&#x27;&amp;quot;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Output:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;encrypt_openssl_system_call(&amp;quot;Top secret text&amp;quot;)&#xA;echo &#x27;Top secret text&#x27; | openssl enc -base64 -e -aes-256-cbc -salt -pass pass:&#x27;mypassword&#x27; -pbkdf2 -p&#xA;salt=27BD7552C3308BBA&#xA;key=B99FCDC5F9296AD2B1488E49B8CD29EDF0D15E13C408B1EEB11A2050F6403E94&#xA;iv =1294745B0A06C42939283E51EAE29E5E&#xA;U2FsdGVkX18nvXVSwzCLuhZeGj9c&#x2B;fKLG&#x2B;nDaitgeRahxKftT20Rax2sYFpjiO3h&#xA;openssl command produced &#x27;U2FsdGVkX18nvXVSwzCLuhZeGj9c&#x2B;fKLG&#x2B;nDaitgeRahxKftT20Rax2sYFpjiO3h&#x27;&#xA;&#xA;decrypt(&#x27;U2FsdGVkX18nvXVSwzCLuhZeGj9c&#x2B;fKLG&#x2B;nDaitgeRahxKftT20Rax2sYFpjiO3h&#x27;)&#xA;echo &#x27;U2FsdGVkX18nvXVSwzCLuhZeGj9c&#x2B;fKLG&#x2B;nDaitgeRahxKftT20Rax2sYFpjiO3h&#x27; | openssl enc -base64 -d -aes-256-cbc -salt -pass pass:&#x27;mypassword&#x27; -pbkdf2&#xA;openssl command decryption produced &#x27;Top secret text&#x27;&#xA;So far so good!&#xA;&#xA;open_ssl_gem_encrypt(&amp;quot;Top secret text&amp;quot;)&#xA;OpenSSL gem produced &#x27;U2FsdGVkX18nvXVSwzCLuhKUdFsKBsQpOSg&#x2B;Uerinl4DIK8yljJ2aHCR&#x2B;8m9Yrq3&#x27;&#xA;&#xA;decrypt(&amp;quot;U2FsdGVkX18nvXVSwzCLuhKUdFsKBsQpOSg&#x2B;Uerinl4DIK8yljJ2aHCR&#x2B;8m9Yrq3&amp;quot;)&#xA;echo &#x27;U2FsdGVkX18nvXVSwzCLuhKUdFsKBsQpOSg&#x2B;Uerinl4DIK8yljJ2aHCR&#x2B;8m9Yrq3&#x27; | openssl enc -base64 -d -aes-256-cbc -salt -pass pass:&#x27;mypassword&#x27; -pbkdf2&#xA;openssl command decryption produced &#x27; |&#xFFFD;S&#xFFFD;&#xFFFD;p&#xFFFD;&#xFFFD;C&#xFFFD;&#xFFFD;H&#xFFFD;PTop secret text&#x27;&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Partial success shows that I must surely be putting the string together in the right order at least!?&lt;/p&gt;&#xA;&lt;p&gt;openssl gem version is 2.1.2&lt;/p&gt;&#xA;&lt;p&gt;openssl version is &amp;quot;LibreSSL 3.3.6&amp;quot;&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75610032</id>
+        <re:rank scheme="https://stackoverflow.com">1</re:rank>
+        <title type="text">Creating and using BASH array of logical values</title>
+        <category scheme="https://stackoverflow.com/tags" term="arrays" />
+        <category scheme="https://stackoverflow.com/tags" term="bash" />
+        <author>
+            <name>Eric Marceau</name>
+            <uri>https://stackoverflow.com/users/9716110</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75610032/creating-and-using-bash-array-of-logical-values" />
+        <published>2023-03-01T23:28:29Z</published>
+        <updated>2023-03-02T13:42:01Z</updated>
+        <summary type="html">
+            &lt;p&gt;As an exercise, I was trying to &amp;quot;optimize&amp;quot; the code presented for a bash-based &lt;strong&gt;&lt;a href=&quot;https://stackoverflow.com/questions/75579778/tictactoe-bash-script/75609455#75609455&quot;&gt;game&lt;/a&gt;&lt;/strong&gt;.  Unfortunately, I am having issues because I can&#x27;t seem to build a &lt;strong&gt;bash array of boolean values&lt;/strong&gt; (if/test results) then use those in a subsequent complex logic expression.&lt;/p&gt;&#xA;&lt;p&gt;I thought I could assign values in this manner:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;bmap[0]=&amp;quot;dummy&amp;quot;&#xA;bmap[1]=$( test ${board[1]} == ${symbol} )&#xA;bmap[2]=$( test ${board[2]} == ${symbol} )&#xA;bmap[3]=$( test ${board[3]} == ${symbol} )&#xA;bmap[4]=$( test ${board[4]} == ${symbol} )&#xA;bmap[5]=$( test ${board[5]} == ${symbol} )&#xA;bmap[6]=$( test ${board[6]} == ${symbol} )&#xA;bmap[7]=$( test ${board[7]} == ${symbol} )&#xA;bmap[8]=$( test ${board[8]} == ${symbol} )&#xA;bmap[9]=$( test ${board[9]} == ${symbol} )&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;then use those in this manner&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;if \&#xA;    [[ ${bmap[1]} &amp;amp;&amp;amp; ${bmap[2]} &amp;amp;&amp;amp; ${bmap[3]} ]] ||&#xA;    [[ ${bmap[4]} &amp;amp;&amp;amp; ${bmap[5]} &amp;amp;&amp;amp; ${bmap[6]} ]] ||&#xA;    [[ ${bmap[7]} &amp;amp;&amp;amp; ${bmap[8]} &amp;amp;&amp;amp; ${bmap[9]} ]] ||&#xA;    [[ ${bmap[1]} &amp;amp;&amp;amp; ${bmap[4]} &amp;amp;&amp;amp; ${bmap[7]} ]] ||&#xA;    [[ ${bmap[2]} &amp;amp;&amp;amp; ${bmap[5]} &amp;amp;&amp;amp; ${bmap[8]} ]] ||&#xA;    [[ ${bmap[3]} &amp;amp;&amp;amp; ${bmap[6]} &amp;amp;&amp;amp; ${bmap[9]} ]] ||&#xA;    [[ ${bmap[1]} &amp;amp;&amp;amp; ${bmap[5]} &amp;amp;&amp;amp; ${bmap[9]} ]] ||&#xA;    [[ ${bmap[3]} &amp;amp;&amp;amp; ${bmap[5]} &amp;amp;&amp;amp; ${bmap[7]} ]]&#xA;then&#xA;    echo &amp;quot;true&amp;quot;&#xA;else&#xA;    echo &amp;quot;false&amp;quot;&#xA;fi&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;But the error I am getting is&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;./test_175.sh: line 29: test: ==: unary operator expected&#xA;./test_175.sh: line 30: test: ==: unary operator expected&#xA;./test_175.sh: line 31: test: ==: unary operator expected&#xA;./test_175.sh: line 32: test: ==: unary operator expected&#xA;./test_175.sh: line 33: test: ==: unary operator expected&#xA;./test_175.sh: line 34: test: ==: unary operator expected&#xA;./test_175.sh: line 35: test: ==: unary operator expected&#xA;./test_175.sh: line 36: test: ==: unary operator expected&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Is there any way to reuse the &lt;strong&gt;bmap array&lt;/strong&gt; values &lt;strong&gt;directly as boolean operation results&lt;/strong&gt;, and &lt;strong&gt;not&lt;/strong&gt; being forced to perform another test referencing those values?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75602040</id>
+        <re:rank scheme="https://stackoverflow.com">1</re:rank>
+        <title type="text">How to read an excel file from a local directory using &lt;py-script&gt;</title>
+        <category scheme="https://stackoverflow.com/tags" term="python" />
+        <category scheme="https://stackoverflow.com/tags" term="pyscript" />
+        <category scheme="https://stackoverflow.com/tags" term="pyodide" />
+        <author>
+            <name>Roh&#xEC;t J&#xED;ndal</name>
+            <uri>https://stackoverflow.com/users/4116300</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75602040/how-to-read-an-excel-file-from-a-local-directory-using-py-script" />
+        <published>2023-03-01T09:51:52Z</published>
+        <updated>2023-03-02T13:41:46Z</updated>
+        <summary type="html">
+            &lt;p&gt;&lt;strong&gt;Requirement :&lt;/strong&gt; I want to read a excel file from my local directory by using &lt;a href=&quot;https://pyscript.net/&quot; rel=&quot;nofollow noreferrer&quot;&gt;&lt;code&gt;&amp;lt;py-script&amp;gt;&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Problem Statement :&lt;/strong&gt; &lt;code&gt;py-script&lt;/code&gt; runs under their own environment. Hence, It is not able to locate the current working directory and when I trying to see the current working directory by using &lt;code&gt;os.cwd()&lt;/code&gt; command. It is returning &lt;code&gt;/home/pyodide&lt;/code&gt; instead of the local directory files.&lt;/p&gt;&#xA;&lt;p&gt;&lt;div class=&quot;snippet&quot; data-lang=&quot;js&quot; data-hide=&quot;false&quot; data-console=&quot;true&quot; data-babel=&quot;false&quot;&gt;&#xD;&#xA;&lt;div class=&quot;snippet-code&quot;&gt;&#xD;&#xA;&lt;pre class=&quot;snippet-code-html lang-html prettyprint-override&quot;&gt;&lt;code&gt;&amp;lt;html&amp;gt;&#xA;  &amp;lt;head&amp;gt;&#xA;    &amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;&#xA;    &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;https://pyscript.net/latest/pyscript.css&quot; /&amp;gt;&#xA;    &amp;lt;script defer src=&quot;https://pyscript.net/latest/pyscript.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&#xA;  &amp;lt;/head&amp;gt;&#xA;  &amp;lt;body&amp;gt;&#xA;    &amp;lt;py-script&amp;gt;&#xA;      import os&#xA;&#xA;      print(os.listdir())&#xA;      print(os.getcwd())&#xA;    &amp;lt;/py-script&amp;gt;&#xA;&#xA;  &amp;lt;/body&amp;gt;&#xA;&amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/pre&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Hence, It is giving the below error.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;FileNotFoundError: [Errno 44] No such file or directory.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Is there any way to achieve the requirement using &lt;code&gt;py-script&lt;/code&gt; ?&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75590089</id>
+        <re:rank scheme="https://stackoverflow.com">2</re:rank>
+        <title type="text">Does atomic guarantee visibility ? JAVA</title>
+        <category scheme="https://stackoverflow.com/tags" term="java" />
+        <category scheme="https://stackoverflow.com/tags" term="multithreading" />
+        <author>
+            <name>mkarmi</name>
+            <uri>https://stackoverflow.com/users/21303173</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75590089/does-atomic-guarantee-visibility-java" />
+        <published>2023-02-28T09:25:54Z</published>
+        <updated>2023-03-02T13:41:25Z</updated>
+        <summary type="html">
+            &lt;p&gt;I was reading this statement :&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The Java language specification guarantees that reading or writing a variable is an atomic operation(unless the variable is of type long or double). Operations variables of type long or double are only atomic if they declared with the volatile keyword.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;now I wonder if I need really to use volatile on &amp;quot;int&amp;quot; or any variable that is not long or double for example considering it&#x27;s atomic, are the changes to that variable guaranteed to be visible by other thread ?&lt;/p&gt;&#xA;&lt;hr /&gt;&#xA;&lt;p&gt;What I want to understand if that atomic guarantees visibility for other thread without using volatile.&lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/75513655</id>
+        <re:rank scheme="https://stackoverflow.com">1</re:rank>
+        <title type="text">Why is Xamarin class inaccessible due to protection level?</title>
+        <category scheme="https://stackoverflow.com/tags" term="xamarin" />
+        <category scheme="https://stackoverflow.com/tags" term="xamarin.android" />
+        <category scheme="https://stackoverflow.com/tags" term="telephonymanager" />
+        <author>
+            <name>rickster26ter1</name>
+            <uri>https://stackoverflow.com/users/12637353</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/75513655/why-is-xamarin-class-inaccessible-due-to-protection-level" />
+        <published>2023-02-20T20:00:38Z</published>
+        <updated>2023-03-02T13:42:07Z</updated>
+        <summary type="html">
+            &lt;p&gt;I am trying to access the &lt;a href=&quot;https://developer.android.com/reference/android/telephony/TelephonyManager#inherited-methods&quot; rel=&quot;nofollow noreferrer&quot;&gt;telephony manager class&lt;/a&gt; in Xamarin forms. I read up on the &lt;a href=&quot;https://learn.microsoft.com/en-us/dotnet/api/Android.Telephony.TelephonyManager?view=xamarin-android-sdk-13&quot; rel=&quot;nofollow noreferrer&quot;&gt;constructor&lt;/a&gt; needed to be used in Xamarin.&lt;/p&gt;&#xA;&lt;p&gt;While I am still a little confused on the types the constructor needs, and the reasoning, I put together a couple constructor args that I thought should work. I am getting an error that:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;TelephonyManager(IntPtr, JNIHandleOwnership) is inaccessible due to its protection level&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;How can this be? I can&#x27;t control the protection level of the C# version of this Android class as far as I know.&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;using Android.Telephony;&#xA;using System;&#xA;using System.Collections.Generic;&#xA;using System.Linq;&#xA;using System.Text;&#xA;&#xA;namespace CellularSignal&#xA;{&#xA;    public class MainActivityViewModel&#xA;    {&#xA;        public double getRSSI()&#xA;        {&#xA;            IntPtr ptr = IntPtr.Zero;&#xA;            // **Intellisense error on line below**&#xA;            var t = new TelephonyManager(ptr, JniHandleOwnership.DoNotTransfer);&#xA;            return 0;&#xA;&#xA;        }&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/65279218</id>
+        <re:rank scheme="https://stackoverflow.com">0</re:rank>
+        <title type="text">nestjs/mongoose Typeerror: Invalid schema configuration</title>
+        <category scheme="https://stackoverflow.com/tags" term="typescript" />
+        <category scheme="https://stackoverflow.com/tags" term="mongoose" />
+        <category scheme="https://stackoverflow.com/tags" term="nestjs" />
+        <category scheme="https://stackoverflow.com/tags" term="mongoose-schema" />
+        <author>
+            <name>Freddy Febres</name>
+            <uri>https://stackoverflow.com/users/14819183</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/65279218/nestjs-mongoose-typeerror-invalid-schema-configuration" />
+        <published>2020-12-13T18:34:59Z</published>
+        <updated>2023-03-02T13:41:29Z</updated>
+        <summary type="html">
+            &lt;p&gt;I&#x27;m looking for assistance, I&#x27;ve been trying to lift up a nest api with mongoose, I proceed to declare a simple schema with one property as is shown in nest docs, but I&#x27;ve come with this error and haven&#x27;t found a way to fix it yet.&lt;/p&gt;&#xA;&lt;p&gt;I declare my module-schema like this&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;import { Prop, Schema, SchemaFactory } from &#x27;@nestjs/mongoose&#x27;;&#xA;import { Document } from &#x27;mongoose&#x27;;&#xA;&#xA;export type PriceDocument = Price &amp;amp; Document;&#xA;&#xA;@Schema()&#xA;export class Price {&#xA;  @Prop(Number)&#xA;  discount?: number;&#xA;&#xA;  @Prop({&#xA;    type: Number,&#xA;    required: true,&#xA;  })&#xA;  netValue: number;&#xA;}&#xA;&#xA;export const PriceSchema = SchemaFactory.createForClass(Price);&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;and I continue getting the TypeError&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;TypeError: Invalid schema configuration: `True` is not a valid type at path `netValue.required`&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;I&#x27;m using the following versions&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;quot;@nestjs/mongoose&amp;quot;: &amp;quot;^7.2.0&amp;quot;,&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;
+        </summary>
+    </entry>
+    <entry>
+        <id>https://stackoverflow.com/q/11296262</id>
+        <re:rank scheme="https://stackoverflow.com">23</re:rank>
+        <title type="text">Derive LinkedIn profile URL from user ID?</title>
+        <category scheme="https://stackoverflow.com/tags" term="linkedin" />
+        <author>
+            <name>Yarin</name>
+            <uri>https://stackoverflow.com/users/165673</uri>
+        </author>
+        <link rel="alternate" href="https://stackoverflow.com/questions/11296262/derive-linkedin-profile-url-from-user-id" />
+        <published>2012-07-02T15:04:16Z</published>
+        <updated>2023-03-02T13:42:24Z</updated>
+        <summary type="html">
+            &lt;p&gt;Is it possible to derive a linkedin profile url (public OR private) from the user ID? &lt;/p&gt;&#xA;
+        </summary>
+    </entry>
+</feed>
