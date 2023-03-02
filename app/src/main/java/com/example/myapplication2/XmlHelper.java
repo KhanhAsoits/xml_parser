@@ -16,34 +16,35 @@ public class XmlHelper<T> {
     XmlPullParser xmlPullParser;
 
     int depth = 0;
+    boolean isStart = false;
     public XmlHelper() {
         ES = new ArrayList<>();
         xmlPullParser = Xml.newPullParser();
     }
 
+
     //         String [] tags  = {"feed-0","entry-1","title-2","category-3","author-2","link-2","updated-2","summary-2"};
-    public List<T> parser(InputStream in, String []matchTag) {
+    public List parser(InputStream in, String []matchTag) {
         try {
-            if (depth == 0){
-                prepare(in);
+            while (xmlPullParser.nextTag() != XmlPullParser.END_TAG){
+
+                xmlPullParser.getEventType()
+
             }
-
-
         } catch (Exception e) {
             Log.d("parser errors: ",e.getMessage());
         }
-
-        return parser(in,matchTag);
     }
 
 
 
-    public void prepare(InputStream in) throws XmlPullParserException, IOException {
+    public void prepare(InputStream in,String startTag) throws XmlPullParserException, IOException {
 // check null
         gI();
         xmlPullParser.setFeature(null,false);
         xmlPullParser.setInput(in,null);
         xmlPullParser.nextTag();
+        xmlPullParser.require(XmlPullParser.START_TAG,null,startTag);
     }
 
     public void gI() {
